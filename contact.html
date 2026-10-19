@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Mzima</title>
+<meta name="description" content="Contact Mzima to start a project, request a service or ask a question about websites, software and AI solutions.">
+<meta name="theme-color" content="#071B3A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mzima">
+<meta property="og:title" content="Contact | Mzima">
+<meta property="og:description" content="Contact Mzima to start a project, request a service or ask a question about websites, software and AI solutions.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html" aria-label="Mzima home"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><polygon points="24,3 43,14 43,34 24,45 5,34 5,14" fill="#0077B6"/><polygon points="24,3 43,14 24,24 5,14" fill="#5cc8ff"/><polygon points="24,24 5,14 5,34 24,45" fill="#005a8a"/><polygon points="24,24 43,14 43,34 24,45" fill="#1aa3e8"/><path d="M15 32V19l9 8 9-8v13" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mzima</span></a><button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span></button><ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="team.html">Our Team</a></li><li><a href="insights.html">Insights</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">Start a Project</a></li></ul></div></header>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Contact</div><h1>Let&rsquo;s Talk About Your Project</h1><p>Tell us what you&rsquo;d like to build or improve. No obligation, just a conversation.</p></div></section>
+<section class="section"><div class="container contact-grid">
+  <div class="form-card reveal">
+    <h2 style="font-size:1.8rem">Tell us about your project</h2>
+    <p class="lead" style="font-size:1.05rem">Share a few details and we&rsquo;ll get back to you using your preferred method.</p>
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required><span class="error-msg" role="alert"></span></div>
+        <div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" required><span class="error-msg" role="alert"></span></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="company">Company name <span class="opt">(optional)</span></label><input type="text" id="company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="phone">Phone or WhatsApp <span class="opt">(optional)</span></label><input type="text" id="phone" name="phone" autocomplete="tel"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="service">Service of interest</label><select id="service" name="service" required><option value="" disabled selected>Select a service…</option><option value="website-development">Website Development</option><option value="web-applications">Web Application Development</option><option value="custom-software">Custom Software Development</option><option value="ai-solutions">AI and Intelligent Solutions</option><option value="backend-api">API and Backend Development</option><option value="database-solutions">Database Design and Integration</option><option value="automation">System Automation</option><option value="maintenance-support">Website Maintenance and Technical Support</option><option value="partnership">Partnership enquiry</option><option value="collaboration">Collaboration / careers</option><option value="not-sure">Not sure yet</option><option value="other">Something else</option></select><span class="error-msg" role="alert"></span></div>
+        <div class="field"><label for="budget">Estimated budget <span class="opt">(optional)</span></label><input type="text" id="budget" name="budget" placeholder="A rough range and currency"></div>
+      </div>
+      <div class="field"><label for="message">Project description</label><textarea id="message" name="message" required placeholder="What are you trying to achieve? Who will use it? Any deadlines?"></textarea><span class="error-msg" role="alert"></span></div>
+      <fieldset class="field"><legend>Preferred contact method</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="contact_method" value="Email" checked> Email</label>
+          <label><input type="radio" name="contact_method" value="Phone or WhatsApp"> Phone / WhatsApp</label>
+          <label><input type="radio" name="contact_method" value="Video call"> Video call</label>
+        </div>
+      </fieldset>
+      <div class="hp-field" aria-hidden="true"><label for="website">Leave this field empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" class="btn btn-primary">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+    </form>
+  </div>
+  <aside class="info-card reveal">
+    <h3>What happens next</h3>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>We read your message and reply using your preferred contact method.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>We talk through your goals, users and constraints.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>We agree the scope and the way forward together.</span></li>
+    </ul>
+    <h3 style="margin-top:1.6rem">Find us online</h3>
+    <ul>
+      <li data-email-wrap hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a data-mzima-email href="#"></a></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>Christian: <a href="https://github.com/Lil-mast" target="_blank" rel="noopener noreferrer">Lil-mast</a></span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>Vanessa: <a href="https://github.com/Williams-V" target="_blank" rel="noopener noreferrer">Williams-V</a></span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>Kisiwani: <a href="https://github.com/Topsy-yy" target="_blank" rel="noopener noreferrer">Topsy-yy</a></span></li>
+    </ul>
+    <p style="font-size:.88rem;margin:0">We only use the details you send to respond to your enquiry. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  </aside>
+</div></section>
+
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><polygon points="24,3 43,14 43,34 24,45 5,34 5,14" fill="#0077B6"/><polygon points="24,3 43,14 24,24 5,14" fill="#5cc8ff"/><polygon points="24,24 5,14 5,34 24,45" fill="#005a8a"/><polygon points="24,24 43,14 43,34 24,45" fill="#1aa3e8"/><path d="M15 32V19l9 8 9-8v13" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mzima</span></a><p>Building Technology. Creating Possibilities. Mzima designs and develops practical digital solutions for businesses and individuals.</p></div><div><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="team.html">Our Team</a></li><li><a href="process.html">Our Process</a></li><li><a href="technology.html">Technology</a></li><li><a href="insights.html">Insights</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div><h4>Services</h4><ul><li><a href="services.html#website-development">Website Development</a></li><li><a href="services.html#web-applications">Web Application Development</a></li><li><a href="services.html#custom-software">Custom Software Development</a></li><li><a href="services.html#ai-solutions">AI and Intelligent Solutions</a></li><li><a href="services.html#backend-api">API and Backend Development</a></li><li><a href="services.html#database-solutions">Database Design and Integration</a></li></ul></div><div><h4>Get in touch</h4><ul><li><a href="contact.html">Contact form</a></li><li data-email-wrap hidden><a data-mzima-email href="#"></a></li><li><a data-social="linkedin" href="#" hidden target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a data-social="x" href="#" hidden target="_blank" rel="noopener noreferrer">X (Twitter)</a></li><li><a data-social="instagram" href="#" hidden target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="careers.html">Careers &amp; Collaboration</a></li><li><a href="resources.html">Resources</a></li></ul><h4 style="margin-top:1.4rem">GitHub</h4><ul><li><a href="https://github.com/Lil-mast" target="_blank" rel="noopener noreferrer">Christian Tazma</a></li><li><a href="https://github.com/Williams-V" target="_blank" rel="noopener noreferrer">Vanessa Williams Adhiambo</a></li><li><a href="https://github.com/Topsy-yy" target="_blank" rel="noopener noreferrer">Kisiwani Finelite Ingridius</a></li></ul></div></div><div class="footer-bottom"><span>&copy; <span data-year>2026</span> Mzima. All rights reserved.</span><nav aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a></nav></div></div></footer><button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<script src="js/config.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

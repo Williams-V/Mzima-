@@ -4,8 +4,10 @@
    Nothing is shown to visitors for values left empty.
    ========================================================== */
 window.MZIMA_CONFIG = {
-  // Official company email (e.g. "hello@yourdomain.com"). Leave "" until verified.
+  // Contact details
   contactEmail: "",
+  whatsappNumber: "254740916977",
+  whatsappDisplay: "0740916977",
 
   // Contact-form endpoint that accepts JSON via POST
   // (e.g. a Formspree / Getform / your own FastAPI endpoint). Leave "" until configured.

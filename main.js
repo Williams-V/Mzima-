@@ -18,9 +18,20 @@
   if (CONFIG.contactEmail) {
     $$('[data-mzima-email]').forEach(function (el) {
       el.textContent = CONFIG.contactEmail;
-      el.setAttribute('href', 'mailto:' + CONFIG.contactEmail);
+      el.setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(CONFIG.contactEmail));
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+      el.setAttribute('title', 'Compose an email in Gmail');
     });
     $$('[data-email-wrap]').forEach(function (el) { el.hidden = false; });
+    $$('[data-business-email-notice]').forEach(function (el) { el.hidden = true; });
+  }
+  if (CONFIG.whatsappNumber) {
+    $$('[data-mzima-whatsapp]').forEach(function (el) {
+      el.textContent = CONFIG.whatsappDisplay || CONFIG.whatsappNumber;
+      el.setAttribute('href', 'https://wa.me/' + CONFIG.whatsappNumber);
+    });
+    $$('[data-whatsapp-wrap]').forEach(function (el) { el.hidden = false; });
   }
   var social = CONFIG.social || {};
   $$('[data-social]').forEach(function (el) {
@@ -298,13 +309,20 @@
       };
 
       if (!CONFIG.formEndpoint) {
-        if (CONFIG.contactEmail) {
-          var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nCompany: ' + data.company + '\nService: ' + data.service +
-            '\nBudget: ' + data.budget + '\nPreferred contact: ' + data.preferred_contact + '\n\n' + data.message;
-          window.location.href = 'mailto:' + CONFIG.contactEmail + '?subject=' + encodeURIComponent('Project enquiry from ' + data.name) + '&body=' + encodeURIComponent(body);
-          setStatus('info', 'Your email app should open with your message ready to send.');
+        var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nCompany: ' + data.company + '\nPhone or WhatsApp: ' + data.phone + '\nService: ' + data.service +
+          '\nBudget: ' + data.budget + '\nPreferred contact: ' + data.preferred_contact + '\n\n' + data.message;
+        if (data.preferred_contact === 'Phone or WhatsApp' && CONFIG.whatsappNumber) {
+          window.location.href = 'https://wa.me/' + CONFIG.whatsappNumber + '?text=' + encodeURIComponent(body);
+          setStatus('info', 'WhatsApp should open with your message ready to send.');
+        } else if (CONFIG.contactEmail) {
+          var composeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(CONFIG.contactEmail) +
+            '&su=' + encodeURIComponent('Project enquiry from ' + data.name) + '&body=' + encodeURIComponent(body);
+          window.open(composeUrl, '_blank', 'noopener');
+          setStatus('info', 'Gmail should open with your message ready to send.');
+        } else if (CONFIG.whatsappNumber) {
+          setStatus('info', 'Our business email will be shared soon. Please choose Phone / WhatsApp to send your enquiry.');
         } else {
-          setStatus('info', 'This form is not connected to a mailbox yet. Site owner: add your form endpoint or email in js/config.js.');
+          setStatus('info', 'This form is not connected to a mailbox yet.');
         }
         return;
       }

@@ -99,25 +99,6 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- Hero: rotating words ---------- */
-  var rot = $('#rotator-word');
-  if (rot && !reduceMotion) {
-    var words = (rot.getAttribute('data-words') || '').split('|').filter(Boolean);
-    if (words.length > 1) {
-      var wi = 0, ci = words[0].length, deleting = false;
-      var tick = function () {
-        var word = words[wi];
-        rot.textContent = word.slice(0, ci);
-        var delay = deleting ? 45 : 95;
-        if (!deleting && ci === word.length) { deleting = true; delay = 1600; }
-        else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 350; }
-        else { ci += deleting ? -1 : 1; }
-        setTimeout(tick, delay);
-      };
-      setTimeout(tick, 1800);
-    }
-  }
-
   /* ---------- Hero: animated crystal network ---------- */
   (function heroCanvas() {
     var canvas = $('#hero-canvas');

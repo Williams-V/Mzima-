@@ -148,7 +148,6 @@ ul { padding-left: 1.2rem; }
     var(--navy);
   color: #cfe0f3; overflow: hidden; isolation: isolate;
 }
-#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 .hero::after { /* soft bottom fade into next section */
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px;
   background: linear-gradient(to bottom, transparent, rgba(7,27,58,.9)); z-index: -1; pointer-events: none;
@@ -158,43 +157,12 @@ ul { padding-left: 1.2rem; }
 .hero p.sub { font-size: clamp(1.1rem, 1.8vw, 1.3rem); max-width: 560px; color: #b4cae3; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
 
-.hero-visual { position: relative; height: 480px; perspective: 1200px; }
-.glass {
-  background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.03));
-  border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(14px);
-  border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25);
-}
-.code-card { position: absolute; top: 30px; left: 0; right: 40px; padding: 1.1rem 1.3rem 1.4rem; transform: rotateY(-8deg) rotateX(4deg); animation: float 7s ease-in-out infinite; }
-.code-card .dots { display: flex; gap: 7px; margin-bottom: .9rem; }
-.code-card .dots i { width: 11px; height: 11px; border-radius: 50%; background: #ff6b6b; }
-.code-card .dots i:nth-child(2) { background: #ffd166; }
-.code-card .dots i:nth-child(3) { background: #3ddc97; }
-.code-card pre { margin: 0; font: 500 .86rem/1.75 "JetBrains Mono", "Fira Code", Consolas, monospace; color: #cfe0f3; white-space: pre-wrap; }
-.tk-k { color: #7cc8ff; } .tk-f { color: #ffd166; } .tk-s { color: #8ae5b4; } .tk-c { color: #6b86a8; }
-.float-chip { position: absolute; padding: .7rem 1rem; display: flex; align-items: center; gap: .65rem; font: 600 .9rem var(--font-head); color: #fff; }
-.float-chip .ic { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--ocean); }
-.float-chip .ic svg { width: 18px; height: 18px; }
-.chip-1 { right: 0; top: 0; animation: float 6s ease-in-out -2s infinite; }
-.chip-2 { left: -10px; bottom: 90px; animation: float 8s ease-in-out -1s infinite; }
-.chip-3 { right: 20px; bottom: 10px; animation: float 7s ease-in-out -4s infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0) rotateY(var(--ry, 0deg)); } 50% { transform: translateY(-14px) rotateY(var(--ry, 0deg)); } }
-.code-card { --ry: -8deg; }
-.crystal-deco { position: absolute; right: -30px; top: 140px; width: 150px; opacity: .9; animation: spin-slow 20s linear infinite; filter: drop-shadow(0 20px 30px rgba(0,119,182,.4)); }
-@keyframes spin-slow { to { transform: rotate(360deg); } }
+.hero-photo { height: 480px; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.22); border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,.32); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; padding-block: 2.5rem 3rem; }
-  .hero-visual { height: 340px; }
-  .code-card { right: 0; transform: none; --ry: 0deg; }
-  .crystal-deco { display: none; }
+  .hero-photo { height: 340px; }
 }
-
-/* ---------- Tech marquee ---------- */
-.marquee { background: var(--navy-2); border-block: 1px solid rgba(255,255,255,.08); overflow: hidden; padding: 1rem 0; }
-.marquee-track { display: flex; gap: 3rem; width: max-content; animation: marquee 38s linear infinite; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track span { font: 600 1.05rem var(--font-head); color: #7f9cc0; display: inline-flex; align-items: center; gap: 3rem; white-space: nowrap; }
-.marquee-track span::after { content: "◆"; font-size: .55rem; color: var(--ocean); }
-@keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ---------- Intro split ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
@@ -439,7 +407,6 @@ fieldset { border: 0; padding: 0; margin: 0 0 1.15rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
-  .marquee-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
 }
 
 /* ---------- Fixes ---------- */

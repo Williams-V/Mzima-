@@ -230,6 +230,9 @@ ul { padding-left: 1.2rem; }
 .founder-card p { color: var(--muted); font-size: .97rem; }
 .founder-card .tags { justify-content: center; margin: .5rem 0 1.4rem; }
 .founder-card .btn { margin-top: auto; }
+.founder-grid--compact .founder-card { padding: 1.5rem; text-align: left; }
+.founder-grid--compact .founder-card::before { display: none; }
+.founder-grid--compact .founder-card .tags { justify-content: flex-start; margin: .25rem 0 0; }
 
 /* ---------- Why ---------- */
 .why-item { padding: 1.6rem; border-radius: var(--radius); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); transition: transform .3s, background .3s; }
